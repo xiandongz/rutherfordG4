@@ -1,0 +1,32 @@
+     =========================================================
+     Geant4 - an Object-Oriented Toolkit for Simulation in HEP
+     =========================================================
+
+                             Rutherford
+                            ------------
+
+ This program demonstrates the Rutherford Scattering experiment with
+ a 1 micro-meter thickness gold foil and a sensor to get the alpha
+ particles after the scattering.
+
+
+ 1- GEOMETRY DEFINITION
+
+   The geometry is constructed in the myDetectorConstruction class.
+   The setup consists of a box shape target (Au) and a box shape
+   sensor. The material of the World is vacuo.
+
+ 2- PHYSICS LIST
+
+   The particle's type and the physic processes which will be available
+   in this program are set in the QBBC physics list. This physics list
+   requires data files for electromagnetic and hadronic processes. The
+   datas which are mandatory for this program have been installed.
+
+ 3- PRIMARY GENERATOR
+
+   The primary generator is defined in the myPrimaryGeneratorAction class.
+   The default kinematics is a 5.488 MeV alpha, distributed in a round
+   area with 2mm diameter, also passed a straight hole with 1mm thickness
+   and 1mm diameter. A root file in data folder provides the initial
+   information about these alpha particles.
